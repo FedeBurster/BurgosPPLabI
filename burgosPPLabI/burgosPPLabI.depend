@@ -1,0 +1,54 @@
+# depslib dependency file v1.0
+1589381681 source:c:\users\federico\desktop\burgospplabi\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"burgos.h"
+
+1589381160 source:c:\users\federico\desktop\burgospplabi\mascotas.c
+	<stdio.h>
+	<stdlib.h>
+	"validaciones.h"
+	<string.h>
+	"Burgos.h"
+
+1589376039 source:c:\users\federico\desktop\burgospplabi\validaciones.c
+
+1589379446 source:c:\users\federico\desktop\burgospplabi\burgos.c
+	<stdio.h>
+	<stdlib.h>
+	"Burgos.h"
+	<string.h>
+
+1589370961 source:c:\users\federico\desktop\burgospplabi\servicio.c
+
+1589381537 source:c:\users\federico\desktop\burgospplabi\tipo.c
+	"tipo.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1589381634 source:c:\users\federico\desktop\burgospplabi\color.c
+	"color.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1589371353 source:c:\users\federico\desktop\burgospplabi\trabajo.c
+
+1589379169 c:\users\federico\desktop\burgospplabi\burgos.h
+	"color.h"
+	"tipo.h"
+	"mascotas.h"
+	"servicio.h"
+
+1589379052 c:\users\federico\desktop\burgospplabi\mascotas.h
+
+1589376039 c:\users\federico\desktop\burgospplabi\validaciones.h
+
+1589381289 c:\users\federico\desktop\burgospplabi\tipo.h
+
+1589381663 c:\users\federico\desktop\burgospplabi\color.h
+
+1589379141 c:\users\federico\desktop\burgospplabi\servicio.h
+
