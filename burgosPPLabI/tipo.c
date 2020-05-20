@@ -8,10 +8,10 @@ int listarTipos(eTipo* tipos)
     int i;
 
     system("cls");
-    printf("\nTipos\n\n");
+    printf("\n| Tipos  |   ID\n\n");
     for(i=0;i<5;i++)
     {
-        printf("%s\n",tipos[i].tipoDescripcion);
+        printf("| %s |  %d\n",tipos[i].tipoDescripcion,tipos[i].tipoId);
 
     }
     printf("\n");

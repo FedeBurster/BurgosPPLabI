@@ -91,10 +91,17 @@ int altaMascota(eMascota* mascotas,int arrayLength,int* banderaId,int* banderaAl
     return -1;
 }
 
-int modificarMascota(eMascota* mascotas,int arrayLength,eTipo* tipos,eColor* colores)
+int modificarMascota(eMascota* mascotas,int arrayLength,eTipo* tipos,eColor* colores,int* banderaAlta)
 {
     char auxString[20];
     int auxInt,i;
+
+    if(*banderaAlta<1)
+    {
+        printf("\nPara modificar los datos primero se debe completar el alta.\n");
+        system("pause");
+        return -1;
+    }
 
     printf("\nIngrese el ID de la mascota que desea modificar: ");
     scanf("%s",auxString);
@@ -110,8 +117,8 @@ int modificarMascota(eMascota* mascotas,int arrayLength,eTipo* tipos,eColor* col
     {
         if(auxInt==mascotas[i].mascotaId && mascotas[i].mascotaIsEmpty==0)
         {
-            system("cls");
-            printf("1)Modificar tipo.\n2)Modificar Edad\n\nIngrese la opcion segun el campo que desea modificar: ");
+
+            printf("\n\n1)Modificar tipo\n2)Modificar e1dad\n\nIngrese la opcion segun el campo que desea modificar: ");
             scanf("%s",auxString);
             if(validarStringInt(auxString)==0)
             {
@@ -172,7 +179,13 @@ int bajaMascota(eMascota* mascotas,int arrayLength,int* banderaAlta)
     char auxString[20];
     int auxInt,i;
 
-    printf("\nIngrese el ID de la mascota que desea dar de baja: ");
+    if(*banderaAlta<1)
+    {
+        printf("\nPara dar de baja primero se debe completar el alta.\n");
+        system("pause");
+        return -1;
+    }
+    printf("\n\nIngrese el ID de la mascota que desea dar de baja: ");
     scanf("%s",auxString);
     fflush(stdin);
     if(validarStringInt(auxString)==0)
@@ -188,7 +201,7 @@ int bajaMascota(eMascota* mascotas,int arrayLength,int* banderaAlta)
         {
             mascotas[i].mascotaIsEmpty=1;
             *banderaAlta=*banderaAlta+1;
-            printf("La baja se ha completado con exito.");
+            printf("\nLa baja se ha completado con exito.\n");
             system("pause");
             return 0;
         }
@@ -196,10 +209,17 @@ int bajaMascota(eMascota* mascotas,int arrayLength,int* banderaAlta)
     return -1;
 }
 
-int listarMascotas(eMascota* mascotas,int arrayLength,eTipo* tipos,eColor* colores)
+int listarMascotas(eMascota* mascotas,int arrayLength,eTipo* tipos,eColor* colores,int* banderaAlta)
 {
     int c, d,i;
     eMascota auxMascota;
+
+    if(*banderaAlta<1)
+    {
+        printf("\nPara listar primero se debe completar el alta.\n");
+        system("pause");
+        return -1;
+    }
 
     for (c = 0 ; c < arrayLength - 1; c++)
     {
@@ -223,33 +243,77 @@ int listarMascotas(eMascota* mascotas,int arrayLength,eTipo* tipos,eColor* color
         }
     }
     system("cls");
-    printf("Tipo\tNombre\n");
+    printf("ID|Color |Tipo  |Nombre\n");
     for(i=0;i<arrayLength;i++)
     {
         if(mascotas[i].mascotaIsEmpty==0)
         {
             if(mascotas[i].mascotaIdTipo==1)
             {
-                printf("Ave\t%s\n",mascotas[i].mascotaNombre);
+                if(mascotas[i].mascotaIdColor==1)
+                    printf("%d |Negro | Ave  |%s\n",mascotas[i].mascotaId,mascotas[i].mascotaNombre);
+                if(mascotas[i].mascotaIdColor==2)
+                    printf("%d |Blanco| Ave  |%s\n",mascotas[i].mascotaId,mascotas[i].mascotaNombre);
+                if(mascotas[i].mascotaIdColor==3)
+                    printf("%d |Gris  | Ave  |%s\n",mascotas[i].mascotaId,mascotas[i].mascotaNombre);
+                if(mascotas[i].mascotaIdColor==4)
+                    printf("%d |Rojo  | Ave  |%s\n",mascotas[i].mascotaId,mascotas[i].mascotaNombre);
+                if(mascotas[i].mascotaIdColor==5)
+                    printf("%d |Azul  | Ave  |%s\n",mascotas[i].mascotaId,mascotas[i].mascotaNombre);
             }
             if(mascotas[i].mascotaIdTipo==2)
             {
-                printf("Gato\t%s\n",mascotas[i].mascotaNombre);
+                if(mascotas[i].mascotaIdColor==1)
+                    printf("%d |Negro | Gato |%s\n",mascotas[i].mascotaId,mascotas[i].mascotaNombre);
+                if(mascotas[i].mascotaIdColor==2)
+                    printf("%d |Blanco| Gato |%s\n",mascotas[i].mascotaId,mascotas[i].mascotaNombre);
+                if(mascotas[i].mascotaIdColor==3)
+                    printf("%d |Gris  | Gato |%s\n",mascotas[i].mascotaId,mascotas[i].mascotaNombre);
+                if(mascotas[i].mascotaIdColor==4)
+                    printf("%d |Rojo  | Gato |%s\n",mascotas[i].mascotaId,mascotas[i].mascotaNombre);
+                if(mascotas[i].mascotaIdColor==5)
+                    printf("%d |Azul  | Gato |%s\n",mascotas[i].mascotaId,mascotas[i].mascotaNombre);
             }
             if(mascotas[i].mascotaIdTipo==3)
             {
-                printf("Perro\t%s\n",mascotas[i].mascotaNombre);
+                if(mascotas[i].mascotaIdColor==1)
+                    printf("%d |Negro |Perro |%s\n",mascotas[i].mascotaId,mascotas[i].mascotaNombre);
+                if(mascotas[i].mascotaIdColor==2)
+                    printf("%d |Blanco|Perro |%s\n",mascotas[i].mascotaId,mascotas[i].mascotaNombre);
+                if(mascotas[i].mascotaIdColor==3)
+                    printf("%d |Gris  |Perro |%s\n",mascotas[i].mascotaId,mascotas[i].mascotaNombre);
+                if(mascotas[i].mascotaIdColor==4)
+                    printf("%d |Rojo  |Perro |%s\n",mascotas[i].mascotaId,mascotas[i].mascotaNombre);
+                if(mascotas[i].mascotaIdColor==5)
+                    printf("%d |Azul  |Perro |%s\n",mascotas[i].mascotaId,mascotas[i].mascotaNombre);
             }
             if(mascotas[i].mascotaIdTipo==4)
             {
-                printf("Pez\t%s\n",mascotas[i].mascotaNombre);
+                if(mascotas[i].mascotaIdColor==1)
+                    printf("%d |Negro | Pez  |%s\n",mascotas[i].mascotaId,mascotas[i].mascotaNombre);
+                if(mascotas[i].mascotaIdColor==2)
+                    printf("%d |Blanco| Pez  |%s\n",mascotas[i].mascotaId,mascotas[i].mascotaNombre);
+                if(mascotas[i].mascotaIdColor==3)
+                    printf("%d |Gris  | Pez  |%s\n",mascotas[i].mascotaId,mascotas[i].mascotaNombre);
+                if(mascotas[i].mascotaIdColor==4)
+                    printf("%d |Rojo  | Pez  |%s\n",mascotas[i].mascotaId,mascotas[i].mascotaNombre);
+                if(mascotas[i].mascotaIdColor==5)
+                    printf("%d |Azul  | Pez  |%s\n",mascotas[i].mascotaId,mascotas[i].mascotaNombre);
             }
             if(mascotas[i].mascotaIdTipo==5)
             {
-                printf("Roedor\t%s\n",mascotas[i].mascotaNombre);
+                if(mascotas[i].mascotaIdColor==1)
+                    printf("%d |Negro |Roedor|%s\n",mascotas[i].mascotaId,mascotas[i].mascotaNombre);
+                if(mascotas[i].mascotaIdColor==2)
+                    printf("%d |Blanco|Roedor|%s\n",mascotas[i].mascotaId,mascotas[i].mascotaNombre);
+                if(mascotas[i].mascotaIdColor==3)
+                    printf("%d |Gris  |Roedor|%s\n",mascotas[i].mascotaId,mascotas[i].mascotaNombre);
+                if(mascotas[i].mascotaIdColor==4)
+                    printf("%d |Rojo  |Roedor|%s\n",mascotas[i].mascotaId,mascotas[i].mascotaNombre);
+                if(mascotas[i].mascotaIdColor==5)
+                    printf("%d |Azul  |Roedor|%s\n",mascotas[i].mascotaId,mascotas[i].mascotaNombre);
             }
         }
     }
-    system("pause");
-    return -1;
+    return 0;
 }

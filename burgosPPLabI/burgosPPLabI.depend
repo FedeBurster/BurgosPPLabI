@@ -1,11 +1,11 @@
 # depslib dependency file v1.0
-1589381681 source:c:\users\federico\desktop\burgospplabi\main.c
+1589950479 source:c:\users\federico\desktop\burgospplabi\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	"burgos.h"
 
-1589381160 source:c:\users\federico\desktop\burgospplabi\mascotas.c
+1589953573 source:c:\users\federico\desktop\burgospplabi\mascotas.c
 	<stdio.h>
 	<stdlib.h>
 	"validaciones.h"
@@ -14,41 +14,53 @@
 
 1589376039 source:c:\users\federico\desktop\burgospplabi\validaciones.c
 
-1589379446 source:c:\users\federico\desktop\burgospplabi\burgos.c
-	<stdio.h>
-	<stdlib.h>
+1589942861 source:c:\users\federico\desktop\burgospplabi\burgos.c
 	"Burgos.h"
 	<string.h>
+	<stdio.h>
+	<stdlib.h>
 
-1589370961 source:c:\users\federico\desktop\burgospplabi\servicio.c
+1589948999 source:c:\users\federico\desktop\burgospplabi\servicio.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"servicio.h"
 
-1589381537 source:c:\users\federico\desktop\burgospplabi\tipo.c
+1589923025 source:c:\users\federico\desktop\burgospplabi\tipo.c
 	"tipo.h"
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 
-1589381634 source:c:\users\federico\desktop\burgospplabi\color.c
+1589951887 source:c:\users\federico\desktop\burgospplabi\color.c
 	"color.h"
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 
-1589371353 source:c:\users\federico\desktop\burgospplabi\trabajo.c
+1589951812 source:c:\users\federico\desktop\burgospplabi\trabajo.c
+	"burgos.h"
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+	<time.h>
 
-1589379169 c:\users\federico\desktop\burgospplabi\burgos.h
+1589952321 c:\users\federico\desktop\burgospplabi\burgos.h
 	"color.h"
 	"tipo.h"
 	"mascotas.h"
 	"servicio.h"
+	"trabajo.h"
 
-1589379052 c:\users\federico\desktop\burgospplabi\mascotas.h
+1589953573 c:\users\federico\desktop\burgospplabi\mascotas.h
 
-1589376039 c:\users\federico\desktop\burgospplabi\validaciones.h
+1589953971 c:\users\federico\desktop\burgospplabi\validaciones.h
 
-1589381289 c:\users\federico\desktop\burgospplabi\tipo.h
+1589952049 c:\users\federico\desktop\burgospplabi\tipo.h
 
-1589381663 c:\users\federico\desktop\burgospplabi\color.h
+1589951887 c:\users\federico\desktop\burgospplabi\color.h
 
-1589379141 c:\users\federico\desktop\burgospplabi\servicio.h
+1589952066 c:\users\federico\desktop\burgospplabi\servicio.h
+
+1589951812 c:\users\federico\desktop\burgospplabi\trabajo.h
 

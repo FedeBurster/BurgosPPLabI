@@ -7,11 +7,10 @@ int listarColores(eColor* colores)
 {
     int i;
     system("cls");
-    printf("\nColores\n\n");
+    printf("\n Colores| ID\n\n");
     for(i=0;i<5;i++)
     {
-        printf("%s\n",colores[i].colorNombre);
-
+        printf("  %s| %d\n",colores[i].colorNombre,colores[i].colorId);
     }
     printf("\n");
     system("pause");
